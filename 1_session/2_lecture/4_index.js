@@ -24,3 +24,19 @@ const skils = [
 const filterSkill = [...new Set(skils.flat(Infinity))]
 
 console.log(filterSkill)  //['java', 'pythone','node',  'react',  'express', 'javascript', 'typescript',   'next']
+
+
+
+// .some returns true/false    -> 
+const num = [1, 3, 5, 7]
+
+console.log(num.some((n)=> n%2 === 0)) // output -> false
+
+
+
+const currentRole = ["admin", "customer", "user", "teacher"];
+const userRole = ["student", "user"];
+
+const hasPermission = currentRole.some(role => userRole.includes(role));
+
+console.log(hasPermission); // output -> true
