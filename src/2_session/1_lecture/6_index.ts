@@ -1,5 +1,8 @@
 // function types =>
-// arrow function & normal function =>
+
+
+
+//? normal function =>
 
 
 
@@ -51,3 +54,54 @@
 
 
 
+
+//? arrow function 
+
+
+
+// Arrow function with types
+// const add = (num1: number, num2: string): number => {
+//     return num1 + Number(num2); 
+// }
+// Example usage
+// add(12, "12"); // output -> 24
+// add(12, 12); //! error -> Argument of type 'number' is not assignable to parameter of type 'string'.
+
+
+// const add = (num1: number, num2: string): number => num1 + Number(num2);
+// add(12, "12"); // 24
+
+
+
+
+
+//? onject function => method =>
+
+
+
+// const poorUser ={
+//     name : "shazan" ,
+//     balance: 0 ,
+//     addBalance(amount: number): number {
+//        return this.balance + amount
+//     }
+// }
+// poorUser.addBalance(100) //* not erroring
+// poorUser.addBalance("100")// getting erro.. //! addBalance is take number only
+
+
+
+const nums: number[] = [1 , 2, 3, 4, 5, 6, 7, 8]
+const sqrNumber : number[] = nums.map((num : number): number=> num*num)
+//? number array..and we squre the every element of nums array.. and it's make by mapFunction.. it's parametar is number.. return type is number.. and thats' sqrNumber type is number[] mean -> number array
+
+
+
+
+// const poorUser ={
+//     name : "shazan" ,
+//     balance: 0 ,
+//     addBalance(amount: number): number {
+//        return this.balance + amount
+//     }
+// }
