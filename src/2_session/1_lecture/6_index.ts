@@ -1,0 +1,53 @@
+// function types =>
+// arrow function & normal function =>
+
+
+
+// function add(num1 , num2){
+//     return num1 + num2
+// }  //! getting error -> Parameter 'num2' implicitly has an 'any' type. // because not define types
+
+
+
+// function add(num1: number , num2 : number){
+//     return num1 + num2
+// }
+// add(2, 5) //* not getting error ..
+// add(5 , "7") //! gettig error -> Argument of type 'string' is not assignable to parameter of type 'number'.
+
+
+
+// function add(num1: number , num2 : number) : number{
+//     return num1 + num2
+// }  //? we give the return type
+// add(2, 5) //* not getting error ..
+// add(5 , "7") //! gettig error -> Argument of type 'string' is not assignable to parameter of type 'number'.
+
+
+
+// function add(num1: number , num2 : string) : number{
+//     return num1 + num2
+// } //! getting error because (number + string = string. but return type is number)
+
+
+
+// function add(num1: number , num2 : string) : string{
+//     return num1 + num2
+// } //* not getting error.. because (number + string = string. and return type is string)
+
+
+
+// function add(num1: number , num2 : string) : number{
+//     return num1 + Number(num2)
+// } //* we typecast the num2 from string to number.. and return the number.. and not getting eror
+
+
+
+// function add(num1: number , num2 : string) : number{
+//     return num1 + Number(num2)
+// }
+// add(12 , "12") // ouptut -> 24 //* not getting error -> because first perameter type is number and second perameter type is string and return type is number..  but out argument is number and string
+// add(12, 12) //! getting error -> because we define two argument is  number and number.. but we declear number and string
+
+
+
