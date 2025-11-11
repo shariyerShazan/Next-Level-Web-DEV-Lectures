@@ -26,7 +26,7 @@ type Add= (numOne: number , numTwo: number) => number
 const add : Add = (numOne , numTwo) => {
   return  numOne + numTwo
 }
-add(12, "12") //! getting error.. because add takes number only
+// add(12, "12") //! getting error.. because add takes number only
 add(12, 12)  // run well
 
 
@@ -38,4 +38,4 @@ type IndexArr = {
     [index: number] : string //! index always number
 }
 const fruits1 : IndexArr = ["banana" , "apple" , "mango"] // run well
-const fruits2 : IndexArr = ["banana" , "apple" , "mango" , 22] //! getting errro
+// const fruits2 : IndexArr = ["banana" , "apple" , "mango" , 22] //! getting errro
