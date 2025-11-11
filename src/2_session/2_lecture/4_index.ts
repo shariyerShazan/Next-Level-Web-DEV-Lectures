@@ -25,3 +25,39 @@ const nameAgeArr: NameAge<string , number>[] = [["shazan" , 22 ], ["priya" , 23]
 const ageNameArr : NameAge<number, string>[] =  [[22  , "shazan"], [23 , "priya" ] , [18 ,"shethe" ]]
 
 
+
+
+type User<T> = {
+    fullName : string ;
+    age : T;
+} 
+const userOne : User<string> = {
+    fullName: "shariyer shazan",
+    age: "22"
+}
+// const userOne2 : User<string> = {
+//     fullName: "shariyer shazan",
+//     age: 22, //! getting error.. generic type is sting
+// }
+
+const userTwo : User<number> = {
+    fullName: "shariyer shazan",
+    age: 22
+}
+
+
+
+
+type Items<T> = {
+    name: string ;
+    price: number;
+    details:T
+}
+const watchOne :Items<{category: string , subcategory: string[]}> = {
+    name: "Skemei",
+    price: 2200 ,
+    details: {
+        category: "watch",
+        subcategory: ["watchOne" , "watchTwo"]
+    }
+}
